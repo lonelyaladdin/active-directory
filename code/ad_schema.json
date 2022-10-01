@@ -12,7 +12,7 @@
         {
             "local_admin": ["ws01"],
             "name": "Waheed Aheed",
-            "password":"[password]",
+            "password":"password",
             "groups": [
                 "Employees"
             ]
