@@ -1,0 +1,22 @@
+{
+    "domain": "xyz.com",
+
+    "groups" : [
+        {
+            "name": "Employees"
+        }
+    ],
+
+    "users": [
+
+        {
+            "local_admin": ["ws01"],
+            "name": "Waheed Aheed",
+            "password":"[password]",
+            "groups": [
+                "Employees"
+            ]
+        }
+        
+    ]
+}
