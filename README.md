@@ -48,3 +48,11 @@ $credentials = (Get-Credential)
 ```shell
 $remoteconnection = New-PSSession -ComputerName <RemoteIPAddress> -Credential $credentials
 ```
+You can enter the session through your terminal with the following command:
+```shell
+Enter-PSSession $remoteconnection
+```
+While running an active session, you are able to execute commands remotely from within your own terminal. For example, to copy files across to the remote machine:
+```shell
+cp <file_path> -ToSession $remoteconnection <directory_path>
+```
