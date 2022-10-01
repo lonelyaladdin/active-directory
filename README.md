@@ -28,3 +28,23 @@ For example:
 ```shell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+# 04 Remote PowerShell Sessions
+
+This applies where the client machine is not joined to the same domain as the remote machine.
+You have to set the IP address of the remote machine as a Trusted Host:
+
+```shell
+Start-Service WinRM
+set-item wsman:\localhost\Client\TrustedHosts -value <RemoteIPAddress>
+```
+You can now start a remote session through the following command:
+```shell
+New-PSSession -ComputerName <RemoteIPAddress> -Credential (Get-Credential)
+```
+To automate the process further for a particular connection, you can create a variable that executes this command with a specified input:
+```shell
+$credentials = (Get-Credential)
+```
+```shell
+$remoteconnection = New-PSSession -ComputerName <RemoteIPAddress> -Credential $credentials
+```
