@@ -14,14 +14,14 @@ $passwords = [System.Collections.ArrayList](Get-Content "data/passwords.txt")
 $groups = @()
 $users = @()
 
-# Default UserCount set to 5 (if not set)
+# Default UserCount set to 50 (if not set)
 if ( $UserCount -eq 0 ){
-    $UserCount = 5
+    $UserCount = 50
 }
 
-# Default GroupCount set to 5 (if not set)
+# Default GroupCount set to 10 (if not set)
 if ( $GroupCount -eq 0 ){
-    $GroupCount = 1
+    $GroupCount = 10
 }
 
 if ( $LocalAdminCount -ne 0){
