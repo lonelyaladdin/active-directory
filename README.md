@@ -54,5 +54,15 @@ Enter-PSSession $remoteconnection
 ```
 While running an active session, you are able to execute commands remotely from within your own terminal. For example, to copy files across to the remote machine:
 ```shell
+ cp .\AD_Generate.ps1 -ToSession $remoteconnection C:\Windows\Tasks
+```
+```shell
  cp .\AD_UserList_Example.json -ToSession $remoteconnection C:\Windows\Tasks
+```
+# 05 Removing Userlists and Password Policies
+
+If you would like to remove the users you have automated into the domain, execute the AD_Generate.ps1 script on the domain controller with the desired userlist file and add an <-undo> argument:
+
+```shell
+.\AD_Generate.ps1 .\AD_UserList_Example.json -Undo
 ```
