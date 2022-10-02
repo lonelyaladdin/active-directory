@@ -66,3 +66,7 @@ If you would like to remove the users you have automated into the domain, execut
 ```shell
 .\AD_Generate.ps1 .\AD_UserList_Example.json -Undo
 ```
+You can check the users which exist in the domain with the following command:
+```shell
+net user /domain
+```
