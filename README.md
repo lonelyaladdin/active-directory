@@ -54,5 +54,5 @@ Enter-PSSession $remoteconnection
 ```
 While running an active session, you are able to execute commands remotely from within your own terminal. For example, to copy files across to the remote machine:
 ```shell
-cp <file_path> -ToSession $remoteconnection <directory_path>
+ cp .\AD_UserList_Example.json -ToSession $remoteconnection C:\Windows\Tasks
 ```
