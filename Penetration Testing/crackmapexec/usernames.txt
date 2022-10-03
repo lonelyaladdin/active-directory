@@ -9,7 +9,6 @@ bmiller
 brees
 carnold
 cgrant
-charlie
 cpaterson
 dmackay
 dmorrison
